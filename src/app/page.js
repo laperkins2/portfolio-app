@@ -2,14 +2,12 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="">
-      <h1 class="flex justify-center w-100 text-2xl ">My Portfolio</h1>
-      <h2 className="flex justify-center w-100 ">
-        Taking a walk into my Codex journey
-      </h2>
+    <main className="flex flex-col justify-center items-center min-h-screen bg-gray-100 mx-8">
+      <h1 class="text-3xl font-bold mb-4 ">My Portfolio</h1>
+      <h2 className="text-xl mb-8">Taking a walk into my Codex journey</h2>
 
       <div className="">
-        <p>
+        <p className="mt-4">
           First and foremost, I would like to thank you for visiting my page. I
           hope that you enjoy what I put together through out my time in Codex
           Academy boot camp. Let me tell you a little bit about myself. I love

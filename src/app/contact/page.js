@@ -30,12 +30,12 @@ export default function ContactPage() {
   };
 
   return (
-    <div>
-      <h1>Contact Page</h1>
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4">Contact Page</h1>
       <div>
-        <h1>Contact Me</h1>
+        <h1 className="text-xl font-bold mb-2">Contact Me</h1>
         <p>Feel free to reach out to me using the following methods:</p>
-        <ul>
+        <ul className="list-disc pl-4 mb-4">
           <li>Email: example@example.com</li>
           <li>Phone: 123-456-7890</li>
         </ul>
@@ -43,9 +43,11 @@ export default function ContactPage() {
           If you prefer I could reach out to you. Could you please fill out the
           form below:
         </p>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="fullName">Full Name</label>
+        <form onSubmit={handleSubmit} className="mb-4">
+          <div className="mb-4">
+            <label htmlFor="fullName" className="block mb-1">
+              Full Name
+            </label>
             <input
               placeholder="Full Name"
               type="text"
@@ -53,28 +55,40 @@ export default function ContactPage() {
               value={formData.fullName}
               required
               onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
             ></input>
           </div>
-          <div>
-            <label htmlFor="email">Email</label>
-            <input
+          <div className="mb-4">
+            <label htmlFor="email" className="block mb-1">
+              Email
+            </label>
+            <textarea
               placeholder="email"
               type="email"
               name="email"
               value={formData.email}
               required
               onChange={handleChange}
-            ></input>
+              className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
+            ></textarea>
           </div>
-          <div>
-            <label htmlFor="message">Message</label>
+          <div className="mb-4">
+            <label htmlFor="message" className="block mb-1">
+              Message
+            </label>
             <input
-              type="message"
+              name="message"
               value={formData.message}
               onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
             ></input>
           </div>
-          <button type="submit">Submit</button>
+          <button
+            type="submit"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Submit
+          </button>
         </form>
         {formSubmitted && <p>Thank you for submitting the form!</p>}
       </div>
