@@ -16,10 +16,18 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <header className="w-100">
           <nav className="flex justify-center w-100 ">
-            <Link href="/">Home</Link>
-            <Link href="/pages/about">About</Link>
-            <Link href="/pages/projects">Projects</Link>
-            <Link href="/pages/contact">Contact</Link>
+            <Link className="m-3" href="/">
+              Home
+            </Link>
+            <Link className="m-3" href="/about">
+              About
+            </Link>
+            <Link className="m-3" href="/projects">
+              Projects
+            </Link>
+            <Link className="m-3" href="/contact">
+              Contact
+            </Link>
           </nav>
         </header>
         {children}

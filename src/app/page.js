@@ -3,8 +3,10 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <main className="">
-      <h1>My Portfolio</h1>
-      <h2>Taking a walk into my Codex journey</h2>
+      <h1 class="flex justify-center w-100 text-2xl ">My Portfolio</h1>
+      <h2 className="flex justify-center w-100 ">
+        Taking a walk into my Codex journey
+      </h2>
 
       <div className="">
         <p>
