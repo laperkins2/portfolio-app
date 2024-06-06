@@ -68,14 +68,15 @@ export default function ContactPage() {
           </div>
           <div>
             <label htmlFor="message">Message</label>
-            <textarea
+            <input
               type="message"
               value={formData.message}
               onChange={handleChange}
-            ></textarea>
+            ></input>
           </div>
           <button type="submit">Submit</button>
         </form>
+        {formSubmitted && <p>Thank you for submitting the form!</p>}
       </div>
     </div>
   );
